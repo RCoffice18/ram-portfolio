@@ -1,12 +1,13 @@
 import { icons_svg } from "@/components/icons/icons_svgs";
 
 export const Constants = {
-  accentColor: "#00ff99",
+  accentColor: "#8E2DE2",
   logo: "Ram",
   username: "Ram Charan",
   jobTitle: "Software Developer",
   description:
     "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
+    resume_path: "/resumes/resume_cv.pdf",
   stats: [
     { num: 1.2, text: "Years of experience" },
     { num: 2, text: "Projects completed" },
@@ -221,13 +222,23 @@ export const projects = [
     title: "AI Customer Support Application",
     description:
       "An intelligent customer support system leveraging AI, developed with HTML5, CSS3, JavaScript, React, Node.js, and MSSQL.",
-    stack: [
-      { name: "React" },
-      { name: "Node.js" },
-      { name: "MSSQL" },
-    ],
+    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MSSQL" }],
     image: "",
     github: "/",
+  },
+  {
+    num: "04",
+    category: "fullstack",
+    title: "Portfolio",
+    description:
+      "Modern portfolio using NextJS, styled with Tailwind CSS, and animated with Framer Motion for a dynamic, responsive design.",
+    stack: [
+      { name: "NextJS" },
+      { name: "Tailwind.Css" },
+      { name: "Framer Motion" },
+    ],
+    image: "",
+    github: "https://github.com/RCoffice18/ram-portfolio/",
   },
 ];
 
@@ -245,6 +256,6 @@ export const info = [
   {
     icon: icons_svg.map,
     title: "Address",
-    description: "1277/B, Valli Chandra Nagar, Sivaganga",
+    description: "1277/B, Maran Illam, Valli Chandra Nagar, Sivaganga - 630561",
   },
-]
+];
