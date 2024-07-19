@@ -7,7 +7,7 @@ export const Constants = {
   jobTitle: "Software Developer",
   description:
     "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
-    resume_path: "/resumes/resume_cv.pdf",
+  resume_path: "/resumes/resume_cv.pdf",
   stats: [
     { num: 1.2, text: "Years of experience" },
     { num: 2, text: "Projects completed" },
@@ -17,33 +17,33 @@ export const Constants = {
     {
       num: "01",
       title: "Frontend Development",
-      link: "/",
+      link: "https://github.com/RCoffice18",
       description:
         "Creating visually appealing, responsive, and user-friendly interfaces using modern technologies like HTML, CSS, JavaScript, and frameworks.",
     },
     {
       num: "02",
       title: "Backend Development",
-      link: "/",
+      link: "https://github.com/RCoffice18",
       description:
         "Building robust server-side applications and databases ensuring secure, scalable, and efficient data processing and storage.",
     },
     {
       num: "03",
       title: "Java Full Stack Development",
-      link: "/",
+      link: "https://github.com/RCoffice18",
       description:
         "Developing complete applications with expertise in both front-end and back-end technologies using Java and related frameworks.",
     },
     {
       num: "04",
       title: "API Design",
-      link: "/",
+      link: "https://github.com/RCoffice18",
       description:
         "Crafting efficient, secure, and scalable APIs for seamless communication between different software systems and applications.",
     },
   ],
-  email: "rcoffice18@gmail.com",
+  mail: "rcoffice18@gmail.com",
   contactNo: "(+91) 877 860 7415",
   linkedIn: "https://www.linkedin.com/in/ram-charan-611826196/",
   gitHub: "https://github.com/RCoffice18",
@@ -198,7 +198,7 @@ export const projects = [
       { name: "Javascript" },
       { name: "React" },
     ],
-    image: "",
+    image: "/assets/banking.png",
     github: "/",
   },
   {
@@ -213,8 +213,9 @@ export const projects = [
       { name: "Node.js" },
       { name: "MongoDB" },
     ],
-    image: "",
-    github: "/",
+    image: "/assets/lms.png",
+    github:
+      "https://github.com/RCoffice18/React-Projects/tree/main/Downloads/Extracted%20FIles/project_syncfusion_dashboard-main",
   },
   {
     num: "03",
@@ -223,8 +224,8 @@ export const projects = [
     description:
       "An intelligent customer support system leveraging AI, developed with HTML5, CSS3, JavaScript, React, Node.js, and MSSQL.",
     stack: [{ name: "React" }, { name: "Node.js" }, { name: "MSSQL" }],
-    image: "",
-    github: "/",
+    image: "/assets/twilio.png",
+    github: "https://github.com/RCoffice18/twilio/tree/master",
   },
   {
     num: "04",
@@ -237,7 +238,7 @@ export const projects = [
       { name: "Tailwind.Css" },
       { name: "Framer Motion" },
     ],
-    image: "",
+    image: "/assets/portfolio.png",
     github: "https://github.com/RCoffice18/ram-portfolio/",
   },
 ];
@@ -259,3 +260,9 @@ export const info = [
     description: "1277/B, Maran Illam, Valli Chandra Nagar, Sivaganga - 630561",
   },
 ];
+
+export const mailInfo = {
+  EMAIL_SERVICE: "smtp.gmail.com",
+  EMAIL_USER: "ceruleansolution@gmail.com",
+  EMAIL_PASS: "seku plyx abnk iowt",
+};
