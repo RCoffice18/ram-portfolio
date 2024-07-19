@@ -10,7 +10,7 @@ export const Constants = {
   resume_path: "/resumes/resume_cv.pdf",
   stats: [
     { num: 1.2, text: "Years of experience" },
-    { num: 2, text: "Projects completed" },
+    { num: 4, text: "Projects completed" },
     { num: 8, text: "Technologies learned" },
   ],
   services: [

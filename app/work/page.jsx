@@ -70,11 +70,11 @@ const Work = () => {
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <span className="text-white text-3xl group-hover:text-accent">
-                          {icons_svg.rightUpArrow}
+                          {icons_svg.gitHub}
                         </span>
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live Project</p>
+                        <p>Git Repo</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -100,7 +100,7 @@ const Work = () => {
                         <Image
                           src={pro.image}
                           fill
-                          className="object-cover"
+                          className="object-fill"
                           alt={pro.title}
                         />
                       </div>
