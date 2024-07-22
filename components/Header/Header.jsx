@@ -1,4 +1,4 @@
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import Link from "next/link";
 import Nav from "../Nav/Nav";
 import { Button } from "../ui/button";

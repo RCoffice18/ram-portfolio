@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { info } from "@/utils/constants";
+import { info } from "@/utils/profiles/ram/constants";
 
 const Contact = () => {
   const [formData, setFormData] = useState({

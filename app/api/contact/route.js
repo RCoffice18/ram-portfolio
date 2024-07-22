@@ -1,4 +1,4 @@
-import { mailInfo } from "@/utils/constants";
+import { mailInfo } from "@/utils/profiles/ram/constants";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {

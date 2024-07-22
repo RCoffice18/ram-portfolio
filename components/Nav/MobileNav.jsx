@@ -3,7 +3,7 @@
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import { navLinks } from "@/utils/navLinks";
 import { icons_svg } from "../icons/icons_svgs";
 

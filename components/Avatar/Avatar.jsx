@@ -1,5 +1,5 @@
 "use client";
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ const Avatar = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/avatar_bg_rm.png"
+            src={Constants.imagePath}
             priority
             quality={100}
             fill

@@ -1,3 +1,25 @@
+## File to be Updated.
+
+                            | | |
+                            | | |
+                            | | |
+                            v v v
+
+step - 1
+utils -> profiles -> [folder_name] -> constants.jsx {adjust your details}
+
+step - 2
+upload your resumes here
+public -> resumes -> [folder_name] -> resume_cv.pdf {rename to resume_cv.pdf}
+
+step - 3
+Ready your GitHub Repositories !!!
+
+                            ^ ^ ^
+                            | | |
+                            | | |
+                            | | |
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

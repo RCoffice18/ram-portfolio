@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import Socials from "@/components/Socials/Socials";
 import Avatar from "@/components/Avatar/Avatar";
 import Statistics from "@/components/Statistics/Statistics";

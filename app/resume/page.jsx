@@ -11,7 +11,7 @@ import {
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
-import { about, education, experience, skills } from "@/utils/constants";
+import { about, education, experience, skills } from "@/utils/profiles/ram/constants";
 import Link from "next/link";
 
 const Resume = () => {

@@ -1,13 +1,18 @@
 import { icons_svg } from "@/components/icons/icons_svgs";
 
 export const Constants = {
+  metaData: {
+    title: "Madhupriya | Portfolio",
+    description: "Inspired by Cristian Mihai Youtube Channel",
+  },
+  logo: "Madhu",
+  username: "Madhupriya",
+  imagePath: "/assets/avatar_bg_rm.png",
   accentColor: "#8E2DE2",
-  logo: "Ram",
-  username: "Ram Charan",
   jobTitle: "Software Developer",
   description:
     "I excel at crafting elegant digital experiences and I am proficient in various programming languages and technologies.",
-  resume_path: "/resumes/resume_cv.pdf",
+  resume_path: "/resumes/madhu/resume_cv.pdf",
   stats: [
     { num: 1.2, text: "Years of experience" },
     { num: 4, text: "Projects completed" },
@@ -56,11 +61,11 @@ export const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Ram Charan M",
+      fieldValue: "Madhupriya J",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+91) 877 860 7415",
+      fieldValue: "(+91) 883 875 6536",
     },
     {
       fieldName: "Experience",
@@ -105,7 +110,7 @@ export const experience = {
 };
 
 export const education = {
-  title: "education",
+  title: "My education",
   description:
     "I excel in cloud computing with AWS and Azure, and hold a diploma in JAVA programming.",
   educationList: [
@@ -247,12 +252,12 @@ export const info = [
   {
     icon: icons_svg.phone,
     title: "Phone",
-    description: "(+91) 877 860 7415",
+    description: "(+91) 883 875 6536",
   },
   {
     icon: icons_svg.mail,
     title: "Email",
-    description: "rcoffice18@gmail.com",
+    description: "madhupriya30071998@gmail.com",
   },
   {
     icon: icons_svg.map,

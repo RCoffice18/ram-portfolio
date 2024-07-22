@@ -1,7 +1,7 @@
 "use client";
 
 import { icons_svg } from "@/components/icons/icons_svgs";
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 

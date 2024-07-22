@@ -1,6 +1,6 @@
 "use client";
 
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import CountUp from "react-countup";
 
 const Statistics = () => {

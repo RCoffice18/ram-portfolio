@@ -1,4 +1,4 @@
-import { Constants } from "@/utils/constants";
+import { Constants } from "@/utils/profiles/ram/constants";
 import Link from "next/link";
 import { icons_svg } from "../icons/icons_svgs";
 

@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/utils/constants";
+import { projects } from "@/utils/profiles/ram/constants";
 import { icons_svg } from "@/components/icons/icons_svgs";
 import WorkSliderBtns from "@/components/Works/WorkSliderBtns";
 
