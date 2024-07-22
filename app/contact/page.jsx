@@ -31,6 +31,10 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSelectChange = (value) => {
+    setFormData({ ...formData, service: value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch("/api/contact", {
@@ -105,9 +109,7 @@ const Contact = () => {
               <Select
                 name="service"
                 value={formData.service}
-                onChange={(value) =>
-                  setFormData({ ...formData, service: value })
-                }
+                onValueChange={handleSelectChange}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
