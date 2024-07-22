@@ -15,6 +15,13 @@ public -> resumes -> [folder_name] -> resume_cv.pdf {rename to resume_cv.pdf}
 step - 3
 Ready your GitHub Repositories !!!
 
+step - 4
+for mail services
+
+[google](https://myaccount.google.com)
+google account -> search for "App passwords" -> create it
+-> update in utils -> profiles -> [folder_name] -> constants.jsx {adjust your mailInfo}
+
                             ^ ^ ^
                             | | |
                             | | |

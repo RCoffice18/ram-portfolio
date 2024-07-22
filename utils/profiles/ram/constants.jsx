@@ -268,6 +268,6 @@ export const info = [
 
 export const mailInfo = {
   EMAIL_SERVICE: "smtp.gmail.com",
-  EMAIL_USER: "ceruleansolution@gmail.com",
-  EMAIL_PASS: "seku plyx abnk iowt",
+  EMAIL_USER: "rcoffice18@gmail.com",
+  EMAIL_PASS: "crtg ajtz hvit fzac",
 };
