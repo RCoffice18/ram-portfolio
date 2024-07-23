@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import {
   Select,
@@ -18,24 +19,25 @@ import {
 import { info } from "@/utils/profiles/ram/constants";
 
 const Contact = () => {
-  const firstnameRef = useRef();
-  const lastnameRef = useRef();
-  const emailRef = useRef();
-  const phoneRef = useRef();
-  const serviceRef = useRef();
-  const messageRef = useRef();
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSelectChange = (value) => {
+    setFormData({ ...formData, service: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = {
-      firstname: firstnameRef.current.value,
-      lastname: lastnameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value,
-      service: serviceRef.current.value,
-      message: messageRef.current.value,
-    };
-
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -79,31 +81,36 @@ const Contact = () => {
                   type="text"
                   name="firstname"
                   placeholder="Firstname"
-                  ref={firstnameRef}
+                  value={formData.firstname}
+                  onChange={handleChange}
                 />
                 <Input
                   type="text"
                   name="lastname"
                   placeholder="Lastname"
-                  ref={lastnameRef}
+                  value={formData.lastname}
+                  onChange={handleChange}
                 />
                 <Input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  ref={emailRef}
+                  value={formData.email}
+                  onChange={handleChange}
                 />
                 <Input
                   type="text"
                   name="phone"
                   placeholder="Phone number"
-                  ref={phoneRef}
+                  value={formData.phone}
+                  onChange={handleChange}
                 />
               </div>
               {/* select */}
               <Select
                 name="service"
-                onValueChange={(value) => (serviceRef.current.value = value)}
+                value={formData.service}
+                onValueChange={handleSelectChange}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
@@ -111,12 +118,16 @@ const Contact = () => {
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="frontend">
+                    <SelectItem value="Frontend Development">
                       Frontend Development
                     </SelectItem>
-                    <SelectItem value="backend">Backend Development</SelectItem>
-                    <SelectItem value="java">Java Web Development</SelectItem>
-                    <SelectItem value="apiDesign">API Design</SelectItem>
+                    <SelectItem value="Backend Development">
+                      Backend Development
+                    </SelectItem>
+                    <SelectItem value="Java Web Development">
+                      Java Web Development
+                    </SelectItem>
+                    <SelectItem value="API Design">API Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -125,7 +136,8 @@ const Contact = () => {
                 className="h-[200px]"
                 placeholder="Type your message here."
                 name="message"
-                ref={messageRef}
+                value={formData.message}
+                onChange={handleChange}
               />
               {/* button */}
               <Button size="md" className="max-w-40" type="submit">
@@ -144,7 +156,16 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      {item.isLink ? (
+                        <Link
+                          href={item.description}
+                          className="text-xl hover:text-accent"
+                        >
+                          {item.description}
+                        </Link>
+                      ) : (
+                        <h3 className="text-xl">{item.description}</h3>
+                      )}
                     </div>
                   </li>
                 );

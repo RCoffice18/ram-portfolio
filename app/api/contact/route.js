@@ -20,34 +20,34 @@ export async function POST(req) {
     await transporter.sendMail({
       from: email,
       to: mailInfo.EMAIL_USER,
-      subject: `New Contact Request from ${firstname} ${lastname}`,
+      subject: `Service Request from ${firstname} ${lastname}`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
-          <h2 style="color: #333;">New Contact Request</h2>
-          <p style="font-size: 16px; color: #555;">You have received a new contact request from your website. Here are the details:</p>
-          <table style="width: 100%; margin-top: 20px;">
-            <tr style="background-color: #f1f1f1;">
-              <td style="padding: 10px; font-weight: bold; color: #333;">Name</td>
-              <td style="padding: 10px;">${firstname} ${lastname}</td>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #1c1c22;">
+          <h2 style="color: #8E2DE2;">Service Request</h2>
+          <p style="font-size: 16px; color: #fff;">A client has requested a service from your website. Here are the details:</p>
+          <table style="width: 100%; margin-top: 20px; background-color: #1c1c22; color: #fff;">
+            <tr style="background-color: #1c1c22;">
+              <td style="padding: 10px; font-weight: bold; color: #8E2DE2;">Name</td>
+              <td style="padding: 10px; color: #fff;">${firstname} ${lastname}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; font-weight: bold; color: #333;">Email</td>
-              <td style="padding: 10px;"><a href="mailto:${email}">${email}</a></td>
+              <td style="padding: 10px; font-weight: bold; color: #8E2DE2;">Email</td>
+              <td style="padding: 10px; color: #fff;"><a href="mailto:${email}" style="color: #8E2DE2;">${email}</a></td>
             </tr>
-            <tr style="background-color: #f1f1f1;">
-              <td style="padding: 10px; font-weight: bold; color: #333;">Phone</td>
-              <td style="padding: 10px;">${phone}</td>
+            <tr style="background-color: #1c1c22;">
+              <td style="padding: 10px; font-weight: bold; color: #8E2DE2;">Phone</td>
+              <td style="padding: 10px; color: #fff;">${phone}</td>
             </tr>
             <tr>
-              <td style="padding: 10px; font-weight: bold; color: #333;">Service</td>
-              <td style="padding: 10px;">${service}</td>
+              <td style="padding: 10px; font-weight: bold; color: #8E2DE2;">Service</td>
+              <td style="padding: 10px; color: #fff;">${service}</td>
             </tr>
-            <tr style="background-color: #f1f1f1;">
-              <td style="padding: 10px; font-weight: bold; color: #333;">Message</td>
-              <td style="padding: 10px;">${message}</td>
+            <tr style="background-color: #1c1c22;">
+              <td style="padding: 10px; font-weight: bold; color: #8E2DE2;">Message</td>
+              <td style="padding: 10px; color: #fff;">${message}</td>
             </tr>
           </table>
-          <p style="margin-top: 20px; font-size: 16px; color: #555;">Please respond to the inquiry at your earliest convenience.</p>
+          <p style="margin-top: 20px; font-size: 16px; color: #555;">Please respond to the request at your earliest convenience.</p>
         </div>
       `,
     });

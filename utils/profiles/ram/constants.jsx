@@ -193,7 +193,17 @@ export const skills = {
 export const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "fullstack",
+    title: "AI Customer Support Application",
+    description:
+      "An intelligent customer support system leveraging AI, developed with HTML5, CSS3, JavaScript, React, Node.js, and MSSQL.",
+    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MSSQL" }],
+    image: "/assets/twilio.png",
+    github: "https://github.com/RCoffice18/twilio/tree/master",
+  },
+  {
+    num: "02",
+    category: "backend",
     title: "Banking Application",
     description:
       "A secure and user-friendly web app for managing banking activities, built using HTML5, CSS3, JavaScript, and React Framework.",
@@ -204,10 +214,10 @@ export const projects = [
       { name: "React" },
     ],
     image: "/assets/banking.png",
-    github: "/",
+    github: "https://github.com/RCoffice18",
   },
   {
-    num: "02",
+    num: "03",
     category: "fullstack",
     title: "Learning Platform Application",
     description:
@@ -221,16 +231,6 @@ export const projects = [
     image: "/assets/lms.png",
     github:
       "https://github.com/RCoffice18/React-Projects/tree/main/Downloads/Extracted%20FIles/project_syncfusion_dashboard-main",
-  },
-  {
-    num: "03",
-    category: "fullstack",
-    title: "AI Customer Support Application",
-    description:
-      "An intelligent customer support system leveraging AI, developed with HTML5, CSS3, JavaScript, React, Node.js, and MSSQL.",
-    stack: [{ name: "React" }, { name: "Node.js" }, { name: "MSSQL" }],
-    image: "/assets/twilio.png",
-    github: "https://github.com/RCoffice18/twilio/tree/master",
   },
   {
     num: "04",
@@ -260,9 +260,10 @@ export const info = [
     description: "rcoffice18@gmail.com",
   },
   {
-    icon: icons_svg.map,
-    title: "Address",
-    description: "1277/B, Maran Illam, Valli Chandra Nagar, Sivaganga - 630561",
+    icon: icons_svg.linkedIn,
+    title: "LinkedIn",
+    description: "https://www.linkedin.com/in/ram-charan-611826196/",
+    isLink: true,
   },
 ];
 

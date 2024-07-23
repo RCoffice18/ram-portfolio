@@ -1,14 +1,12 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import { about, education, experience, skills } from "@/utils/profiles/ram/constants";
@@ -116,7 +114,7 @@ const Resume = () => {
                             <Tooltip>
                               <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
                                 <div
-                                  className={`text-6xl group-hover:text-accent transition-all duration-300`}
+                                  className={`text-6xl group-hover:text-accent-hover transition-all duration-300`}
                                 >
                                   {item.icon}
                                 </div>

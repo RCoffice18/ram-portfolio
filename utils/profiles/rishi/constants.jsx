@@ -260,9 +260,10 @@ export const info = [
     description: "rcoffice18@gmail.com",
   },
   {
-    icon: icons_svg.map,
-    title: "Address",
-    description: "1277/B, Maran Illam, Valli Chandra Nagar, Sivaganga - 630561",
+    icon: icons_svg.linkedIn,
+    title: "LinkedIn",
+    description: "https://www.linkedin.com/in/ram-charan-611826196/",
+    isLink: true,
   },
 ];
 
