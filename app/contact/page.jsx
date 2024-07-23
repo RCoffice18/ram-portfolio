@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,25 +18,24 @@ import {
 import { info } from "@/utils/profiles/ram/constants";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSelectChange = (value) => {
-    setFormData({ ...formData, service: value });
-  };
+  const firstnameRef = useRef();
+  const lastnameRef = useRef();
+  const emailRef = useRef();
+  const phoneRef = useRef();
+  const serviceRef = useRef();
+  const messageRef = useRef();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const formData = {
+      firstname: firstnameRef.current.value,
+      lastname: lastnameRef.current.value,
+      email: emailRef.current.value,
+      phone: phoneRef.current.value,
+      service: serviceRef.current.value,
+      message: messageRef.current.value,
+    };
+
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -80,36 +79,31 @@ const Contact = () => {
                   type="text"
                   name="firstname"
                   placeholder="Firstname"
-                  value={formData.firstname}
-                  onChange={handleChange}
+                  ref={firstnameRef}
                 />
                 <Input
                   type="text"
                   name="lastname"
                   placeholder="Lastname"
-                  value={formData.lastname}
-                  onChange={handleChange}
+                  ref={lastnameRef}
                 />
                 <Input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  ref={emailRef}
                 />
                 <Input
                   type="text"
                   name="phone"
                   placeholder="Phone number"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  ref={phoneRef}
                 />
               </div>
               {/* select */}
               <Select
                 name="service"
-                value={formData.service}
-                onValueChange={handleSelectChange}
+                onValueChange={(value) => (serviceRef.current.value = value)}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
@@ -122,7 +116,7 @@ const Contact = () => {
                     </SelectItem>
                     <SelectItem value="backend">Backend Development</SelectItem>
                     <SelectItem value="java">Java Web Development</SelectItem>
-                    <SelectItem value="api">API Design</SelectItem>
+                    <SelectItem value="apiDesign">API Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -131,8 +125,7 @@ const Contact = () => {
                 className="h-[200px]"
                 placeholder="Type your message here."
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+                ref={messageRef}
               />
               {/* button */}
               <Button size="md" className="max-w-40" type="submit">
