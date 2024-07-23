@@ -20,7 +20,7 @@ export async function POST(req) {
     await transporter.sendMail({
       from: email,
       to: mailInfo.EMAIL_USER,
-      subject: `New Contact Request from ${formData.firstname} ${formData.lastname}`,
+      subject: `New Contact Request from ${firstname} ${lastname}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
           <h2 style="color: #333;">New Contact Request</h2>
@@ -28,23 +28,23 @@ export async function POST(req) {
           <table style="width: 100%; margin-top: 20px;">
             <tr style="background-color: #f1f1f1;">
               <td style="padding: 10px; font-weight: bold; color: #333;">Name</td>
-              <td style="padding: 10px;">${formData.firstname} ${formData.lastname}</td>
+              <td style="padding: 10px;">${firstname} ${lastname}</td>
             </tr>
             <tr>
               <td style="padding: 10px; font-weight: bold; color: #333;">Email</td>
-              <td style="padding: 10px;"><a href="mailto:${formData.email}">${formData.email}</a></td>
+              <td style="padding: 10px;"><a href="mailto:${email}">${email}</a></td>
             </tr>
             <tr style="background-color: #f1f1f1;">
               <td style="padding: 10px; font-weight: bold; color: #333;">Phone</td>
-              <td style="padding: 10px;">${formData.phone}</td>
+              <td style="padding: 10px;">${phone}</td>
             </tr>
             <tr>
               <td style="padding: 10px; font-weight: bold; color: #333;">Service</td>
-              <td style="padding: 10px;">${formData.service}</td>
+              <td style="padding: 10px;">${service}</td>
             </tr>
             <tr style="background-color: #f1f1f1;">
               <td style="padding: 10px; font-weight: bold; color: #333;">Message</td>
-              <td style="padding: 10px;">${formData.message}</td>
+              <td style="padding: 10px;">${message}</td>
             </tr>
           </table>
           <p style="margin-top: 20px; font-size: 16px; color: #555;">Please respond to the inquiry at your earliest convenience.</p>
